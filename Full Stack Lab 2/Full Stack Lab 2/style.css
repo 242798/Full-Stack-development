@@ -1,0 +1,576 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+    background: #ffffff;
+}
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    font-size: 22px;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    background: linear-gradient(135deg, #e9f2ff, #f8f9fa);
+    padding: 100px 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.profile-image-container {
+    position: relative;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    filter: saturate(1.2);
+}
+
+.online-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    background: green;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 3px solid white;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-heading h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #0d6efd;
+    margin: 12px auto;
+}
+
+.section-heading p {
+    color: #666;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-section {
+    background: white;
+}
+
+.profile-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border: 1px solid #eeeeee;
+}
+
+.profile-card::before {
+    content: "PROFILE";
+    position: absolute;
+    top: -12px;
+    left: 25px;
+    background: #0d6efd;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.profile-card h3 {
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-section {
+    background: #f5f7fa;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-box {
+    flex: 1 1 200px;
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-box h3 {
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.projects-section {
+    background: white;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    width: 30%;
+    min-width: 280px;
+    padding: 20px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.08);
+}
+
+.grayscale img {
+    filter: grayscale(100%);
+}
+
+.grayscale:hover img {
+    filter: grayscale(0%);
+}
+
+.project-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BOOTSTRAP FLEX
+========================================= */
+
+.bootstrap-flex-section {
+    background: #f8f9fa;
+}
+
+.bootstrap-demo {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.flex-item {
+    background: #212529;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 120px;
+}
+
+
+/* =========================================
+   POSITIONING
+========================================= */
+
+.position-section {
+    background: #f5f5f5;
+}
+
+.position-card {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ffc107;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   ACADEMIC SECTION
+========================================= */
+
+.academic-section {
+    background: linear-gradient(135deg, #f5f8ff, #ffffff);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.academic-card {
+    background: white;
+    max-width: 950px;
+    margin: 0 auto 25px auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.academic-card h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.academic-card p,
+.academic-card div {
+    line-height: 1.8;
+}
+
+.academic-card strong {
+    color: #0d6efd;
+}
+
+
+/* =========================================
+   STUDENT PROFILE OUTPUT
+========================================= */
+
+#objectOutput {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+#objectOutput br {
+    display: none;
+}
+
+#objectOutput {
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   OPERATOR OUTPUT
+========================================= */
+
+#operatorOutput {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+#operatorOutput strong {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #212529;
+}
+
+
+/* =========================================
+   FINAL RESULT CARD
+========================================= */
+
+.academic-result-card {
+    max-width: 950px;
+    margin: 35px auto 0 auto;
+    padding: 35px;
+    border-radius: 18px;
+    background: #212529;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.academic-result-card h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.academic-result-card hr {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.academic-result-card strong {
+    color: #ffffff;
+}
+
+.academic-result-card div {
+    line-height: 2;
+}
+
+
+/* =========================================
+   RESULT HIGHLIGHTS
+========================================= */
+
+.result-highlight {
+    display: inline-block;
+    background: #0d6efd;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    background: white;
+}
+
+.contact-section p {
+    color: #666;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #212529;
+    color: white;
+    padding: 25px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+    .academic-card {
+        padding: 22px;
+    }
+
+    #objectOutput {
+        grid-template-columns: 1fr;
+    }
+
+    .academic-result-card {
+        padding: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE DEVICES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .hero-section {
+        padding: 70px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .profile-image {
+        width: 190px;
+        height: 190px;
+    }
+
+    .academic-card {
+        padding: 18px;
+    }
+
+    .academic-card h3 {
+        font-size: 20px;
+    }
+
+    .academic-result-card h3 {
+        font-size: 23px;
+    }
+
+}
