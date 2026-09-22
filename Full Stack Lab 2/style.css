@@ -1,0 +1,953 @@
+```css
+/* =========================================
+   GENERAL STYLING
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        #e9f2ff,
+        #f8f9fa
+    );
+
+    padding: 90px 20px;/* ================= GENERAL ================= */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+    background: #ffffff;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+
+/* ================= HERO SECTION ================= */
+
+.hero-section {
+    background: linear-gradient(135deg, #eef5ff, #ffffff);
+    padding: 100px 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: #212529;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* ================= PROFILE IMAGE ================= */
+
+.profile-image-container {
+    position: relative;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+
+    /* CSS FILTER */
+    filter: saturate(1.15);
+
+    transition: transform 0.4s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.04);
+}
+
+
+/* ================= ONLINE BADGE ================= */
+
+.online-badge {
+    position: absolute;
+    bottom: 15px;
+    right: 5px;
+
+    background: #198754;
+    color: white;
+
+    padding: 8px 16px;
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #6c757d;
+}
+
+
+/* ================= PSEUDO ELEMENT ================= */
+
+.section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    background: #0d6efd;
+
+    margin: 14px auto;
+
+    border-radius: 10px;
+}
+
+
+/* ================= PROFILE SECTION ================= */
+
+.profile-section {
+    background: #ffffff;
+}
+
+.profile-card {
+    max-width: 750px;
+    margin: auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+    position: relative;
+
+    border-left: 5px solid #0d6efd;
+}
+
+.profile-card h3 {
+    margin-bottom: 18px;
+}
+
+.profile-card p {
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* PSEUDO ELEMENT */
+
+.profile-card::before {
+    content: "PROFILE";
+
+    position: absolute;
+
+    top: -13px;
+    left: 25px;
+
+    background: #0d6efd;
+    color: white;
+
+    padding: 6px 16px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-section {
+    background: #f3f6fa;
+}
+
+
+/* FLEXBOX */
+
+.skills-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.skill-box {
+    flex: 1 1 200px;
+
+    background: white;
+
+    padding: 32px 25px;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.skill-box h3 {
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.skill-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects-section {
+    background: #ffffff;
+}
+
+.project-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.project-card {
+    width: 30%;
+
+    min-width: 280px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.16);
+}
+
+
+/* PROJECT IMAGE */
+
+.project-image {
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+.project-image img {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.08);
+}
+
+
+/* FILTER */
+
+.grayscale img {
+    filter: grayscale(100%);
+
+    transition: filter 0.4s ease;
+}
+
+.grayscale:hover img {
+    filter: grayscale(0%);
+}
+
+
+/* ================= BOOTSTRAP FLEX ================= */
+
+.bootstrap-flex-section {
+    background: #f3f6fa;
+}
+
+.bootstrap-demo {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.09);
+}
+
+.flex-item {
+    background: #212529;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.flex-item:hover {
+    transform: translateY(-5px);
+
+    background: #0d6efd;
+}
+
+
+/* ================= POSITIONING ================= */
+
+.position-section {
+    background: #eef2f6;
+}
+
+.position-card {
+    position: relative;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+.position-card p {
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* ABSOLUTE POSITION */
+
+.featured-badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    background: #ffc107;
+
+    color: #212529;
+
+    padding: 7px 14px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    background: white;
+}
+
+.contact-section .section-heading {
+    margin-bottom: 25px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #181c20;
+
+    color: white;
+
+    padding: 25px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .profile-image {
+        width: 230px;
+        height: 230px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+    .profile-card,
+    .position-card {
+        padding: 30px 25px;
+    }
+
+}
+}
+
+
+/* CSS FLEXBOX */
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.profile-image-container {
+    position: relative;
+}
+
+
+/* CSS FILTER */
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+
+    filter: saturate(1.2);
+}
+
+
+/* =========================================
+   ABSOLUTE POSITIONING
+========================================= */
+
+.online-badge {
+    position: absolute;
+
+    bottom: 15px;
+    right: 10px;
+
+    background: green;
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   PSEUDO ELEMENTS
+========================================= */
+
+.section-heading h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background: #0d6efd;
+
+    margin: 12px auto;
+}
+
+
+/* =========================================
+   PROFILE CARD
+========================================= */
+
+.profile-card {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+
+    position: relative;
+}
+
+
+/* PSEUDO ELEMENT */
+
+.profile-card::before {
+    content: "PROFILE";
+
+    position: absolute;
+
+    top: -12px;
+    left: 25px;
+
+    background: #0d6efd;
+
+    color: white;
+
+    padding: 5px 15px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SKILLS SECTION
+========================================= */
+
+.skills-section {
+    background: #f5f5f5;
+}
+
+
+/* =========================================
+   CSS FLEXBOX
+========================================= */
+
+.skills-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.skill-box {
+    flex: 1 1 200px;
+
+    background: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* CSS EFFECT */
+
+.skill-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   PROJECT SECTION
+========================================= */
+
+.project-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+
+.project-card {
+    width: 30%;
+
+    min-width: 280px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.project-image {
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.project-image img {
+    width: 100%;
+
+    height: 200px;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.project-image:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   CSS FILTER
+========================================= */
+
+.grayscale img {
+    filter: grayscale(100%);
+}
+
+.grayscale:hover img {
+    filter: grayscale(0%);
+}
+
+
+/* =========================================
+   BOOTSTRAP FLEX SECTION
+========================================= */
+
+.bootstrap-flex-section {
+    background: #f8f9fa;
+}
+
+
+.bootstrap-demo {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.flex-item {
+    background: #212529;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 5px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   POSITIONING
+========================================= */
+
+.position-section {
+    background: #f5f5f5;
+}
+
+
+.position-card {
+    position: relative;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.featured-badge {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    background: #ffc107;
+
+    color: black;
+
+    padding: 6px 12px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    background: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #212529;
+
+    color: white;
+
+    padding: 20px 0;
+}
+
+
+.footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .profile-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+}
+```
